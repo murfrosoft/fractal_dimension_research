@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractalResearch", "FractalResearch\FractalResearch.csproj", "{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44AEAC43-E439-4903-BA3B-028C174F57AF}
+	EndGlobalSection
+EndGlobal
