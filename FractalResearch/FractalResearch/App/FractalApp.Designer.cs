@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             pnlControls = new Panel();
+            btnUpdateNoise = new Button();
+            btnUpdateFilter = new Button();
             rtbOutput = new RichTextBox();
             btnFdGo = new Button();
             nudNoise = new NumericUpDown();
@@ -45,8 +47,6 @@
             btnChooseImage = new Button();
             pbImage = new PictureBox();
             openFileDialog1 = new OpenFileDialog();
-            btnUpdateFilter = new Button();
-            btnUpdateNoise = new Button();
             pnlControls.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudNoise).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudThreshold).BeginInit();
@@ -77,6 +77,26 @@
             pnlControls.Size = new Size(344, 426);
             pnlControls.TabIndex = 0;
             // 
+            // btnUpdateNoise
+            // 
+            btnUpdateNoise.Location = new Point(282, 149);
+            btnUpdateNoise.Name = "btnUpdateNoise";
+            btnUpdateNoise.Size = new Size(54, 23);
+            btnUpdateNoise.TabIndex = 15;
+            btnUpdateNoise.Text = "Update";
+            btnUpdateNoise.UseVisualStyleBackColor = true;
+            btnUpdateNoise.Click += btnUpdateNoise_Click;
+            // 
+            // btnUpdateFilter
+            // 
+            btnUpdateFilter.Location = new Point(282, 80);
+            btnUpdateFilter.Name = "btnUpdateFilter";
+            btnUpdateFilter.Size = new Size(54, 23);
+            btnUpdateFilter.TabIndex = 14;
+            btnUpdateFilter.Text = "Update";
+            btnUpdateFilter.UseVisualStyleBackColor = true;
+            btnUpdateFilter.Click += btnUpdateFilter_Click;
+            // 
             // rtbOutput
             // 
             rtbOutput.Location = new Point(3, 239);
@@ -99,6 +119,7 @@
             // nudNoise
             // 
             nudNoise.Location = new Point(207, 149);
+            nudNoise.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             nudNoise.Name = "nudNoise";
             nudNoise.Size = new Size(59, 23);
             nudNoise.TabIndex = 11;
@@ -142,6 +163,7 @@
             // nudThreshold
             // 
             nudThreshold.Location = new Point(207, 80);
+            nudThreshold.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
             nudThreshold.Name = "nudThreshold";
             nudThreshold.Size = new Size(59, 23);
             nudThreshold.TabIndex = 6;
@@ -181,6 +203,7 @@
             cbBoxFilter.Name = "cbBoxFilter";
             cbBoxFilter.Size = new Size(121, 23);
             cbBoxFilter.TabIndex = 2;
+            cbBoxFilter.SelectedValueChanged += cbBoxFilter_SelectedValueChanged;
             // 
             // lblImageName
             // 
@@ -214,26 +237,6 @@
             // openFileDialog1
             // 
             openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // btnUpdateFilter
-            // 
-            btnUpdateFilter.Location = new Point(282, 80);
-            btnUpdateFilter.Name = "btnUpdateFilter";
-            btnUpdateFilter.Size = new Size(54, 23);
-            btnUpdateFilter.TabIndex = 14;
-            btnUpdateFilter.Text = "Update";
-            btnUpdateFilter.UseVisualStyleBackColor = true;
-            btnUpdateFilter.Click += btnUpdateFilter_Click;
-            // 
-            // btnUpdateNoise
-            // 
-            btnUpdateNoise.Location = new Point(282, 149);
-            btnUpdateNoise.Name = "btnUpdateNoise";
-            btnUpdateNoise.Size = new Size(54, 23);
-            btnUpdateNoise.TabIndex = 15;
-            btnUpdateNoise.Text = "Update";
-            btnUpdateNoise.UseVisualStyleBackColor = true;
-            btnUpdateNoise.Click += btnUpdateNoise_Click;
             // 
             // FractalApp
             // 

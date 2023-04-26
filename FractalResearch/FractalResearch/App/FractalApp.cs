@@ -31,11 +31,19 @@ namespace FractalResearch
 
         private void btnUpdateFilter_Click(object sender, EventArgs e)
         {
-            if(cbBoxFilter.SelectedItem.ToString() == "Threshold")
+            if (cbBoxFilter.SelectedItem.ToString() == "Threshold")
             {
                 if (!string.IsNullOrEmpty(_filename) && _activeImage != null)
                 {
-                    _filteredImage = ImageThresholdFilter.Filter(_activeImage, (byte)nudThreshold.Value);
+                    _filteredImage = ImageFilters.ThresholdFilter(_activeImage, (byte)nudThreshold.Value);
+                    pbImage.Image = _filteredImage;
+                }
+            }
+            if (cbBoxFilter.SelectedItem.ToString() == "Edge")
+            {
+                if (!string.IsNullOrEmpty(_filename) && _activeImage != null)
+                {
+                    _filteredImage = ImageFilters.EdgeFilter(_activeImage, (byte)nudThreshold.Value);
                     pbImage.Image = _filteredImage;
                 }
             }
@@ -49,6 +57,20 @@ namespace FractalResearch
         private void btnFdGo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbBoxFilter_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbBoxFilter.SelectedItem.ToString() == "Threshold")
+            {
+                nudThreshold.Value = 50;
+                nudThreshold.Increment = 5;
+            }
+            if (cbBoxFilter.SelectedItem.ToString() == "Edge")
+            {
+                nudThreshold.Value = 10;
+                nudThreshold.Increment = 1;
+            }
         }
     }
 }
