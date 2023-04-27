@@ -105,7 +105,37 @@ namespace FractalResearch.Filters
             return bmpFiltered;
         }
 
-        private static byte AverageIntensity(Color color)
+        public static Bitmap UniformNoiseFilter(Bitmap bmp, double percentage, int seed = 0)
+        {
+            Random rnd = new Random(seed);
+            Bitmap bmpFiltered = new Bitmap(bmp.Width, bmp.Height);
+
+            for (int i = 0; i < bmp.Width; i++)
+            {
+                for (int j = 0; j < bmp.Height; j++)
+                {
+                    Color pixel = bmp.GetPixel(i, j);
+                    if (rnd.NextDouble()*100 <= percentage)
+                    {                        
+                        if(pixel.R == 0)
+                        {
+                            bmpFiltered.SetPixel(i, j, Color.White);
+                        }
+                        else
+                        {
+                            bmpFiltered.SetPixel(i, j, Color.Black);
+                        }
+                    }
+                    else
+                    {
+                        bmpFiltered.SetPixel(i, j, pixel);
+                    }
+                }
+            }
+            return bmpFiltered;
+        }
+
+        public static byte AverageIntensity(Color color)
         {
             return (byte)((color.R + color.G + color.B) / 3);
         }

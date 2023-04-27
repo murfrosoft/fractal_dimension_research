@@ -118,11 +118,13 @@
             // 
             // nudNoise
             // 
+            nudNoise.DecimalPlaces = 3;
             nudNoise.Location = new Point(207, 149);
-            nudNoise.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            nudNoise.Maximum = new decimal(new int[] { 50, 0, 0, 0 });
             nudNoise.Name = "nudNoise";
             nudNoise.Size = new Size(59, 23);
             nudNoise.TabIndex = 11;
+            nudNoise.Value = new decimal(new int[] { 1, 0, 0, 65536 });
             // 
             // cbBoxNoiseType
             // 

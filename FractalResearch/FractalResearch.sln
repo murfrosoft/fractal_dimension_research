@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FractalResearch", "FractalResearch\FractalResearch.csproj", "{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractalResearch.Tests", "FractalResearch.Tests\FractalResearch.Tests.csproj", "{40C06B67-9F11-4E7A-9253-A890DDDABDE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractalResearch.UnitTests", "FractalResearch.UnitTests\FractalResearch.UnitTests.csproj", "{9AC70801-10F8-4ADD-9D6D-3294C24CA6D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3F0FAB8-0242-4DFD-BB24-A1B1765EF20F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{40C06B67-9F11-4E7A-9253-A890DDDABDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40C06B67-9F11-4E7A-9253-A890DDDABDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40C06B67-9F11-4E7A-9253-A890DDDABDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40C06B67-9F11-4E7A-9253-A890DDDABDE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AC70801-10F8-4ADD-9D6D-3294C24CA6D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AC70801-10F8-4ADD-9D6D-3294C24CA6D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AC70801-10F8-4ADD-9D6D-3294C24CA6D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AC70801-10F8-4ADD-9D6D-3294C24CA6D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

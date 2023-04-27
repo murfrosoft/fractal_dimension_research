@@ -1,7 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-
-namespace FractalResearch.Tests
+namespace FractalResearch.UnitTests
 {
     [TestClass]
     public class UnitTest1

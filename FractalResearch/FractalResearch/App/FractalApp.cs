@@ -7,6 +7,7 @@ namespace FractalResearch
         private string _filename;
         private Bitmap _activeImage;
         private Bitmap _filteredImage;
+        private Bitmap _noisedImage;
 
         public FractalApp()
         {
@@ -51,7 +52,24 @@ namespace FractalResearch
 
         private void btnUpdateNoise_Click(object sender, EventArgs e)
         {
-
+            if (cbBoxNoiseType.SelectedItem.ToString() == "Uniform")
+            {
+                if (!string.IsNullOrEmpty(_filename) && _filteredImage != null)
+                {
+                    _noisedImage = ImageFilters.UniformNoiseFilter(_filteredImage, (double)nudNoise.Value);
+                    pbImage.Image = _noisedImage;
+                    int count = ImageUtilities.CountBlackPixels(_noisedImage);
+                    rtbOutput.Text = $"Counted {count} black pixels in {_filename}";
+                }
+            }
+            if (cbBoxNoiseType.SelectedItem.ToString() == "Gaussian")
+            {
+                //if (!string.IsNullOrEmpty(_filename) && _activeImage != null)
+                //{
+                //    _filteredImage = ImageFilters.EdgeFilter(_activeImage, (byte)nudThreshold.Value);
+                //    pbImage.Image = _filteredImage;
+                //}
+            }
         }
 
         private void btnFdGo_Click(object sender, EventArgs e)
